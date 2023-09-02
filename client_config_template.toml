@@ -1,0 +1,13 @@
+[LogConf]
+LogFile = ""
+HoldFilesNum = 3
+
+[Socks5]
+ProxyConf.Network.Addr = "localhost:[your_port]"
+
+PoolConf.TargetSocks5Conf.Addr = "[your remote vps ip]:[you remote vps port]"
+PoolConf.Auth.NeedAuth = true
+PoolConf.Auth.Username = "[username]"
+PoolConf.Auth.Password = "[password]"
+PoolConf.Auth.CryptConf.KeyFile = "aes.key"
+PoolConf.Pool.ConnCount = 50

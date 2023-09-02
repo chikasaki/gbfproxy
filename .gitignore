@@ -19,3 +19,9 @@
 
 # Go workspace file
 go.work
+
+aes.key
+client_config.toml
+server_config.toml
+.idea
+go.sum

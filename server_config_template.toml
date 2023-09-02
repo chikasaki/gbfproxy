@@ -1,0 +1,11 @@
+[LogConf]
+LogFile = "server_proxy.log"
+HoldFilesNum = 3
+
+[Socks5]
+ProxyConf.Auth.NeedAuth = true
+ProxyConf.Auth.Username = "[username]"
+ProxyConf.Auth.Password = "[password]"
+ProxyConf.Auth.CryptConf.KeyFile = "aes.key"
+
+ProxyConf.Network.Addr = ":[your listen port]"
