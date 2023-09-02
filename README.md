@@ -23,7 +23,7 @@ chmod +x server_proxy
 - 配置`server_config.toml`，具体的配置可以直接拷贝`server_config_template.toml`，并按下图修改
 ![img_4.png](img_4.png)
 - 随便找一个[aes密钥生成器](https://www.imaegoo.com/2020/aes-key-generator/)，生成一个256-bit的密钥。创建一个名为：`aes.key`的文件，将生成的密钥拷贝进去
-- 使用命令`nohup ./server_pro > nohup.out 2>&1 &`启动服务端代理
+- 使用命令`nohup ./server_proxy > nohup.out 2>&1 &`启动服务端代理
 
 ### 客户端配置
 - 首先根据您自身使用的操作系统，选择合适的gbfproxy版本
