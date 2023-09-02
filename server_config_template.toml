@@ -8,4 +8,4 @@ ProxyConf.Auth.Username = "[username]"
 ProxyConf.Auth.Password = "[password]"
 ProxyConf.Auth.CryptConf.KeyFile = "aes.key"
 
-ProxyConf.Network.Addr = ":[your listen port]"
+ProxyConf.Network.Addr = ":53440"

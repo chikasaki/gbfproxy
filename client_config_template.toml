@@ -3,9 +3,9 @@ LogFile = ""
 HoldFilesNum = 3
 
 [Socks5]
-ProxyConf.Network.Addr = "localhost:[your_port]"
+ProxyConf.Network.Addr = "localhost:52340"
 
-PoolConf.TargetSocks5Conf.Addr = "[your remote vps ip]:[you remote vps port]"
+PoolConf.TargetSocks5Conf.Addr = "[your remote vps ip]:53440"
 PoolConf.Auth.NeedAuth = true
 PoolConf.Auth.Username = "[username]"
 PoolConf.Auth.Password = "[password]"
