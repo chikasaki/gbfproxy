@@ -11,6 +11,9 @@
 - 被偷流量的本质，是因为大部分朋友专线使用的代理为[goproxy](https://github.com/snail007/goproxy)，在脑死亡版本的代理配置中使用了socks5，但服务器没有对请求做鉴权
 - 本代理虽然也使用了socks5协议做代理，但在服务端（vps）测使用了socks5用户名密码的认证方式，并有配套的客户端实现，双端会使用对称加密（aes）对您的用户名和密码辅以时间戳进行加密。因此别人想偷流量，不仅得拿到您的用户名和密码，同时还得拿到您的aes密钥，狠狠地对流量小偷进行了一波反击
 
+## 如何与朋友共享使用
+在你按照下面步骤搭建完服务端之后和客户端之后，可以将客户端的几个文件：gbf_windows.exe，aes.key，client_config.toml压缩打包，直接发给你的好友，好友解压之后只需要进行switchyomega配置，就可以直接使用你的代理了
+
 ## 如何配置代理
 ![img.png](img.png)
 
@@ -53,7 +56,7 @@ chmod +x server_proxy, server_deploy.sh, restart_server.sh
 
 ### switchyomega配置
 这里有两种配置方式，可任选其一：
-1. 配置pac脚本，如果你本身也续费了acgpower，推荐用这种方式，可以控制只让少数的gbf请求走代理，大部分gbf图片缓存可以用acgp的缓存能力
+1. 配置pac脚本，如果你本身也续费了acgpower，推荐用这种方式，可以控制只让少数的gbf请求走代理，大部分gbf图片缓存可以用acgp的缓存能力。但是，请注意使用该方式的时候，你要先把acgp打开，不然用不了
   - 新建情景模式，选择pac情景模式：![img_8.png](img_8.png)
   - 将下面脚本直接复制到pac脚本输入框中：
 ```javascript
