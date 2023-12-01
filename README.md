@@ -158,7 +158,7 @@ function FindProxyForURL(url, host) {
                                 return "PROXY 127.0.0.1:8123";
                         }
                         if (new RegExp("\\.granbluefantasy.jp$").test(host)) {
-                                return "SOCKS5 127.0.0.1:51240";
+                                return "SOCKS5 127.0.0.1:52340";
                         }
  		}
 	}catch(e){}
