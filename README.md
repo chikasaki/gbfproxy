@@ -149,10 +149,10 @@ function FindProxyForURL(url, host) {
 	try{
 		if(ver>=1){
 			if(host==="203.104.248.14"||host==="ws.game.granbluefantasy.jp"){
-				return "SOCKS5 127.0.0.1:51240";
+				return "SOCKS5 127.0.0.1:52340";
 			}
 			if(host==="content-autofill.googleapis.com"){
-				return "SOCKS5 127.0.0.1:51240";
+				return "SOCKS5 127.0.0.1:52340";
 			}
                         if (new RegExp("\\.akamaized.net$").test(host)) {
                                 return "PROXY 127.0.0.1:8123";
