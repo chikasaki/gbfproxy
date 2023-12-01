@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"github.com/txthinking/socks5"
-	"io"
 	"myproxy/crypt"
 	"myproxy/mylog"
 	"myproxy/mypool"
@@ -107,13 +106,16 @@ func newSock5Conn(conf Sock5ConnPoolConf, c crypt.Crypt) (*socks5.Client, error)
 }
 
 func isConnClose(c *socks5.Client) bool {
-	tcpConn, _ := c.TCPConn.(*net.TCPConn)
-	if _, err := tcpConn.Read([]byte{}); err != nil {
-		if err == io.EOF {
-			mylog.Errorf("[Err] tcpConn close")
-		}
-		mylog.Errorf("[Err] tcpConn read error:%+v", err)
-		return true
-	}
+	//if runtime.GOOS == "windows" {
+	//	return false
+	//}
+	//tcpConn, _ := c.TCPConn.(*net.TCPConn)
+	//if _, err := tcpConn.Read([]byte{}); err != nil {
+	//	if err == io.EOF {
+	//		mylog.Errorf("[Err] tcpConn close")
+	//	}
+	//	mylog.Errorf("[Err] tcpConn read error:%+v", err)
+	//	return true
+	//}
 	return false
 }

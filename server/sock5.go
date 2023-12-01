@@ -70,7 +70,7 @@ func (s *CryptCredentialStore) Valid(encryptUser, encryptPassword string) bool {
 	}
 
 	//judge time
-	if comm.Abs[int64](lNow, userResult.Timestamp) > 3 {
+	if !gConf.Business.NoCheckTimestamp && comm.Abs[int64](lNow, userResult.Timestamp) > 60 {
 		mylog.Errorf("[Err] server timestamp:%d, request timestamp:%d, too different", userResult.Timestamp, lNow)
 		return false
 	}

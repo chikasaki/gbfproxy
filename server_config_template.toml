@@ -8,4 +8,8 @@ ProxyConf.Auth.Username = "[username]"
 ProxyConf.Auth.Password = "[password]"
 ProxyConf.Auth.CryptConf.KeyFile = "aes.key"
 
-ProxyConf.Network.Addr = ":53440"
+ProxyConf.Network.Addr = ":[port]"
+
+[Business]
+#为true时，不检查时间戳，只检查用户名和密码的正确性；反之
+NoCheckTimestamp = false

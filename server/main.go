@@ -11,6 +11,9 @@ var gConf = struct {
 	Socks5  struct {
 		ProxyConf Socks5ProxyConf
 	}
+	Business struct {
+		NoCheckTimestamp bool
+	}
 }{}
 
 func main() {
