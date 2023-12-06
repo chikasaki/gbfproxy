@@ -26,7 +26,7 @@ sudo yum install vim
 ```shell
 wget https://github.com/chikasaki/gbfproxy/releases/download/v1.2/gbf_proxy.zip
 unzip gbf_proxy.zip; cd gbf_proxy
-chmod +x server_proxy, server_deploy.sh, restart_server.sh
+chmod +x server_proxy server_deploy.sh restart_server.sh
 ./server_deploy.sh
 ```
 - 打开vps管理平台，新增一个端口映射规则，内网端口为53540，如果你在执行上述命令时手动修改了端口号，则内网端口填写对应的端口号；公网端口号随意填，下面客户端配置的时候会用到
