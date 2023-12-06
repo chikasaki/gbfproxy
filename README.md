@@ -52,7 +52,7 @@ chmod +x server_proxy server_deploy.sh restart_server.sh
 在vps中输入: vim aes.key
 将内容直接复制到windows的同名文件即可
 ```
-- 双击启动客户端
+- 最后配置完，会有三个文件(以windows系统举例)：`gbfproxy_windows.exe`, `aes.key`, `client_config.toml`，请保证这三个文件在同一文件夹内，然后双击启动客户端
 
 ### switchyomega配置
 这里有两种配置方式，可任选其一：
